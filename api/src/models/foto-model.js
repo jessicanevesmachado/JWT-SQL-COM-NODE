@@ -4,10 +4,7 @@ var Request= require('tedious').Request;
 var TYPES = require('tedious').TYPES;  
 
 class FotoModel {
-
-     
-
-    //http://www.technicalkeeda.com/nodejs-tutorials/nodejs-store-image-into-mysql-database
+    
     save(response, cb) {       
        
         var service = this;
@@ -64,9 +61,6 @@ class FotoModel {
            connection.execSql(request);  
     
         }); 
-
-        
-      
     
     }
 
