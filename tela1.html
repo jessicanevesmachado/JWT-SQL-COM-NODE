@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="public/css/bootstrap.css">       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="public/css/estilo.css">
+        <title>Teste Boticario</title>
+</head>
+
+<body>
+
+             <header>              
+                <div class="navbar navbar-danger bg-danger shadow-sm">
+                        <div class="container d-flex justify-content-between">
+                            <a href="#" class="navbar-brand d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                            <strong>Tutoriais</strong>
+                            </a>                 
+                        </div>
+                </div>
+              </header>
+
+
+              <main role="main">
+
+                    <section class="jumbotron text-center">
+                      <div class="container">
+                        <h1 class="jumbotron-heading text-primary">Quer Aprender um make facil e prático?</h1>  
+                        <h1 class="jumbotron-heading text-danger">Escolha um Tutorial.</h1>  
+                      </div>
+                    </section>
+                  
+                    <div class="album ">
+                      <div class="container">  
+
+
+                                <!--VIDEO 1 -->
+                                <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4 shadow-sm">
+                                     <video onclick="SelecionarVideo('video1.mp4')"><source src="public/video/video1.mp4" type="video/mp4"></video>
+                                    <div class="card-body">
+                                        <p class="card-text"> Você gostaria que seus cílios fossem mais volumosos ou que eles fossem tão longos quanto as pernas da Gisele Bündchen? Se a respota for sim, então esse tutorial é para você.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button onclick="SelecionarVideo('video1.mp4')" type="button" class="btn btn-sm btn-outline-secondary">Visualizar</button>                                           
+                                        </div>
+                                        <small class="text-muted">8:40 minutos</small>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <!--VIDEO 2 -->
+                                <div class="col-md-6">
+                                    <div class="card mb-4 shadow-sm">
+                                    <video onclick="SelecionarVideo('video2.mp4')"><source src="public/video/video2.mp4" type="video/mp4"></video>
+                                    <div class="card-body">
+                                            <p class="card-text">Há muitas maneiras diferentes de passar batom, mas alguns passos extras podem não só fazer o seu durar mais, como também parecer mais uniforme e mais nítido.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                                <button onclick="SelecionarVideo('video2.mp4')" type="button" class="btn btn-sm btn-outline-secondary">Visualizar</button>                                           
+                                        </div>
+                                        <small class="text-muted">8:40 minutos</small>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>  
+
+                        </div>
+                      </div>
+                    </div>
+                  
+                </main>
+
+
+
+<!-- MODAL PARA TIRAR FOTO -->
+
+<div id="modalFoto" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myLargeModalLabel">Vamos tirar um foto?</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                            <div class="col-lg-9 col-md-9 col-xs-12"> 
+                                    <video autoplay="true" id="webCamera"></video>                            
+                            </div>
+        
+                            <div  class="col-lg-3 col-md-3 col-xs-12 float-right">                       
+                                    <div class="row">
+                                            <button type="button"  onclick="takeSnapShot()"" class='btn btn-primary'>
+                                                    <i class="fa fa-picture"></i> Tirar Foto
+                                            </button>   
+                                    </div>
+                                     </br>
+                                    <div class="row">
+                                            <button onclick="cancelar()" type="button" class='btn btn-secondary'>
+                                                    <i class="fa fa-picture"></i> Cancelar
+                                            </button> 
+                                    </div>
+                                    <input  type="hidden" id="base_img" name="base_img"/>                            
+                            </div>
+                    </div>
+                    
+                </div>
+        </div>
+  </div>
+</div>
+ 
+
+
+<!-- MODAL PARA Assistir o video -->
+
+<div id="modalassistirvideo" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+      
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="myLargeModalLabel">Video tutorial</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+      
+                      <div class="modal-body">
+                          <div class="row">
+                                <video controls   id="video-tutorial">
+                                        <source src="" type="video/mp4">
+                                </video> 
+                          </div>
+                        </br>
+                          <div class="row">
+                               <div class="col-lg-12">
+                                    <button onclick="finalizar()" type="button" class='btn btn-success'>
+                                            <i class="fa fa-picture"></i> Finalizar
+                                    </button> 
+                               </div>
+                         </div>
+                          
+                      </div>
+              </div>
+        </div>
+      </div>
+
+<!--MODAL ALERT-->
+
+<div id="modalalert" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+                        <div class="modal-body">
+                                <p id='p-alerta'>Operação realizada com sucesso</p>
+                                <div class="col-lg-12">
+                                        <button onclick="redirect('index.html')" type="button" class='btn btn-success btn-block'>
+                                                <i class="fa fa-picture"></i> OK
+                                        </button> 
+                                </div>
+                        </div>
+              
+          </div>
+        </div>
+</div>
+
+   
+   
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" type="text/javascript"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/sessao.js"></script>
+<script src="public/js/main.js"></script>
+
+
+

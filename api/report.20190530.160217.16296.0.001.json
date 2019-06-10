@@ -1,0 +1,350 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190530.160217.16296.0.001.json",
+    "dumpEventTime": "2019-05-30T16:02:17Z",
+    "processId": 16296,
+    "cwd": "C:\\Users\\anny.navarro\\Desktop\\HopeMM\\HopeMM",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "server.js"
+    ],
+    "nodejsVersion": "v11.14.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "11.14.0",
+      "v8": "7.0.276.38-node.18",
+      "uv": "1.27.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.37.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.14.0/node-v11.14.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.14.0/node-v11.14.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v11.14.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.15063",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "host": "MM-64336"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff62820d24e",
+      "symbol": "std::basic_ios<char,std::char_traits<char> >::fill+16366"
+    },
+    {
+      "pc": "0x00007ff62820c0f9",
+      "symbol": "std::basic_ios<char,std::char_traits<char> >::fill+11929"
+    },
+    {
+      "pc": "0x00007ff62820b923",
+      "symbol": "std::basic_ios<char,std::char_traits<char> >::fill+9923"
+    },
+    {
+      "pc": "0x00007ff6282fc1d2",
+      "symbol": "uv_loop_fork+89362"
+    },
+    {
+      "pc": "0x00007ff62872454e",
+      "symbol": "v8::internal::FatalProcessOutOfMemory+798"
+    },
+    {
+      "pc": "0x00007ff628724487",
+      "symbol": "v8::internal::FatalProcessOutOfMemory+599"
+    },
+    {
+      "pc": "0x00007ff6287d7f64",
+      "symbol": "v8::internal::Heap::RootIsImmortalImmovable+14068"
+    },
+    {
+      "pc": "0x00007ff6287cdd72",
+      "symbol": "v8::internal::Heap::CollectGarbage+7234"
+    },
+    {
+      "pc": "0x00007ff6287cc588",
+      "symbol": "v8::internal::Heap::CollectGarbage+1112"
+    },
+    {
+      "pc": "0x00007ff6287d5eb7",
+      "symbol": "v8::internal::Heap::RootIsImmortalImmovable+5703"
+    },
+    {
+      "pc": "0x00007ff6287d5f36",
+      "symbol": "v8::internal::Heap::RootIsImmortalImmovable+5830"
+    },
+    {
+      "pc": "0x00007ff62890de01",
+      "symbol": "v8::internal::Factory::NewFillerObject+49"
+    },
+    {
+      "pc": "0x00007ff6289c7cd6",
+      "symbol": "v8::internal::StoreBuffer::StoreBufferOverflow+27190"
+    },
+    {
+      "pc": "0x000001ccc0050481",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1497456640,
+    "totalCommittedMemory": 1497456640,
+    "usedMemory": 1453273968,
+    "availableMemory": 31165496,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 524288,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 4194304,
+        "capacity": 2062336,
+        "used": 178888,
+        "available": 1883448
+      },
+      "old_space": {
+        "memorySize": 1426264064,
+        "committedMemory": 1426264064,
+        "capacity": 1389932128,
+        "used": 1389418608,
+        "available": 513520
+      },
+      "code_space": {
+        "memorySize": 1572864,
+        "committedMemory": 1572864,
+        "capacity": 992896,
+        "used": 992896,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1585152,
+        "committedMemory": 1585152,
+        "capacity": 895840,
+        "used": 895840,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 63315968,
+        "committedMemory": 63315968,
+        "capacity": 90040680,
+        "used": 61754216,
+        "available": 28286464
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 242.312,
+    "kernelCpuSeconds": 178.75,
+    "cpuConsumptionPercent": 95.4789,
+    "maxRss": 1549414400,
+    "pageFaults": {
+      "IORequired": 587667,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 5540,
+      "writes": 223672
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ACLOCAL_PATH": "/mingw64/share/aclocal:/usr/share/aclocal",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\anny.navarro\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "MM-64336",
+    "COMSPEC": "C:\\Windows\\system32\\cmd.exe",
+    "CONFIG_SITE": "/mingw64/etc/config.site",
+    "DISPLAY": "needs-to-be-defined",
+    "EXEPATH": "C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git",
+    "HOME": "C:\\Users\\anny.navarro",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\anny.navarro",
+    "HOSTNAME": "MM-64336",
+    "INFOPATH": "/usr/local/info:/usr/share/info:/usr/info:/share/info",
+    "INIT_CWD": "C:\\Users\\anny.navarro\\Desktop\\HopeMM\\HopeMM",
+    "LANG": "pt_BR.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\anny.navarro\\AppData\\Local",
+    "LOGONSERVER": "\\\\AD02",
+    "MANPATH": "/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man",
+    "MINGW_CHOST": "x86_64-w64-mingw32",
+    "MINGW_PACKAGE_PREFIX": "mingw-w64-x86_64",
+    "MINGW_PREFIX": "/mingw64",
+    "MSYSTEM": "MINGW64",
+    "MSYSTEM_CARCH": "x86_64",
+    "MSYSTEM_CHOST": "x86_64-w64-mingw32",
+    "MSYSTEM_PREFIX": "/mingw64",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"dev\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_python": "F:\\Python\\python.exe",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.15.2 npm/? node/v11.14.0 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Program Files (x86)\\Yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "dev",
+    "npm_lifecycle_script": "nodemon server.js",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_dependencies_blob_stream": "^0.1.3",
+    "npm_package_dependencies_child_process": "^1.0.2",
+    "npm_package_dependencies_cors": "^2.8.5",
+    "npm_package_dependencies_crypto": "^1.0.1",
+    "npm_package_dependencies_dateformat": "^3.0.3",
+    "npm_package_dependencies_express": "^4.16.4",
+    "npm_package_dependencies_express_session": "^1.16.1",
+    "npm_package_dependencies_ip": "^1.1.5",
+    "npm_package_dependencies_jspdf_autotable": "^3.1.1",
+    "npm_package_dependencies_line_reader": "^0.4.0",
+    "npm_package_dependencies_nedb": "^1.8.0",
+    "npm_package_dependencies_nodemailer": "^6.2.1",
+    "npm_package_dependencies_nodemon": "^1.19.0",
+    "npm_package_dependencies_numero_por_extenso": "^1.0.5",
+    "npm_package_dependencies_pdfkit": "^0.9.1",
+    "npm_package_dependencies_pg": "^7.11.0",
+    "npm_package_dependencies_redis": "^2.8.0",
+    "npm_package_dependencies_replace_string": "^3.0.0",
+    "npm_package_dependencies_request": "^2.88.0",
+    "npm_package_dependencies_unzip": "^0.1.11",
+    "npm_package_dependencies_utf8": "^3.0.0",
+    "npm_package_name": "",
+    "npm_package_scripts_dev": "nodemon server.js",
+    "npm_package_scripts_start": "node server.js",
+    "npm_package_version": "",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\anny.navarro\\OneDrive",
+    "ORIGINAL_PATH": "C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\mingw64\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin;C:\\Users\\anny.navarro\\bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\PuTTY;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit;C:\\Program Files\\Git\\cmd;C:\\Program Files\\kubectl;C:\\Program Files\\helm\\windows-amd64;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\IBM\\Cloud\\bin;C:\\Users\\anny.navarro\\AppData\\Roaming\\npm;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Yarn\\bin;C:\\PostgreSQL\\pg10\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\anny.navarro\\AppData\\Roaming\\Cloud Foundry;C:\\Users\\anny.navarro\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\anny.navarro\\AppData\\Roaming\\npm",
+    "ORIGINAL_TEMP": "/tmp",
+    "ORIGINAL_TMP": "/tmp",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Users\\ANNY~1.NAV\\AppData\\Local\\Temp\\yarn--1559242494666-0.8386782181019923;C:\\Users\\anny.navarro\\Desktop\\HopeMM\\HopeMM\\node_modules\\.bin;C:\\Users\\anny.navarro\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Users\\anny.navarro\\AppData\\Local\\Yarn\\bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Users\\anny.navarro\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\mingw64\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\local\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\mingw64\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin;C:\\Users\\anny.navarro\\bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\PuTTY;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit;C:\\Program Files\\Git\\cmd;C:\\Program Files\\kubectl;C:\\Program Files\\helm\\windows-amd64;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\IBM\\Cloud\\bin;C:\\Users\\anny.navarro\\AppData\\Roaming\\npm;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Yarn\\bin;C:\\PostgreSQL\\pg10\\bin;C:\\Users\\anny.navarro\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\anny.navarro\\AppData\\Roaming\\Cloud Foundry;C:\\Users\\anny.navarro\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\anny.navarro\\AppData\\Roaming\\npm;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin\\vendor_perl;C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin\\core_perl",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PKG_CONFIG_PATH": "/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "8e09",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "/c/Users/anny.navarro/Desktop/HopeMM/HopeMM",
+    "SESSIONNAME": "Console",
+    "SHELL": "C:\\Users\\anny.navarro\\AppData\\Local\\Programs\\Git\\usr\\bin\\bash.exe",
+    "SHLVL": "2",
+    "SSH_ASKPASS": "/mingw64/libexec/git-core/git-gui--askpass",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\Windows",
+    "TEMP": "C:\\Users\\ANNY~1.NAV\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\ANNY~1.NAV\\AppData\\Local\\Temp",
+    "TMPDIR": "C:\\Users\\ANNY~1.NAV\\AppData\\Local\\Temp",
+    "USERDNSDOMAIN": "INTRANET.LOJASMM.COM.BR",
+    "USERDOMAIN": "INTRANET",
+    "USERDOMAIN_ROAMINGPROFILE": "INTRANET",
+    "USERNAME": "anny.navarro",
+    "USERPROFILE": "C:\\Users\\anny.navarro",
+    "VS140COMNTOOLS": "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools\\",
+    "WINDIR": "C:\\Windows",
+    "YARN_WRAP_OUTPUT": "false",
+    "_": "/usr/bin/winpty"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\System32\\wshbth.dll"
+  ]
+}
