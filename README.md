@@ -3,8 +3,8 @@
 As tecnologias utilizadas para o desenvolvimento do projeto foram: nodejs, jquery, javascript, sql server 2017 e bootstrap 4
 
 Observação:
-O script da criação da tabela esta na pasta SQL
 
+O script da criação da tabela esta na pasta SQL
 
 o arquivo database.js é onde está configurado a conexão com o banco sql server.
 
