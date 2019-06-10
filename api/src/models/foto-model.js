@@ -34,13 +34,14 @@ class FotoModel {
              
            request.on('row', function(columns) {               
                
-                service.selecionar(columns[0].value,cb);
+             cb({status:true, mensagem: 'Operação realizada com sucesso.'});
                
            });       
 
            connection.execSql(request);  
     }
 
+    //** exemplo de como recuperar a imagem */
     selecionar(id,cb){
         
         var connection = database.conecta();       

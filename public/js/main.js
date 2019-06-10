@@ -77,7 +77,7 @@ function assistirVideo(){
 function finalizar(){
     
     var parametros = {video:videoSelecionado, foto:document.querySelector("#base_img").value.replace("data:image/jpeg;base64,","")};
-    //var parametros = {video:videoSelecionado, foto:document.querySelector("#base_img").value};
+   
     makeRequest("foto/save",parametros,"POST", function(response){
         console.log(response);
         $("#modalassistirvideo").modal('hide');        

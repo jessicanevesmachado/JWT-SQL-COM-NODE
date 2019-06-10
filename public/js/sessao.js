@@ -4,7 +4,7 @@ function autenticar(cb){
 
   
     var _token   =  localStorage.getItem("token");
-    var expirado = verificaTokenExpirado(_token);
+    var expirado =  verificaTokenExpirado(_token);
 
     if(typeof(_token) != "undefined" && _token != "" && !expirado) 
         cb(JSON.parse(_token));
@@ -18,7 +18,9 @@ function autenticar(cb){
 
 function getToken(cb){
 
-    $.post(urlbase+"login",{user:"admin",pwd:"admin"}, function( data ) { 
+
+    $.post(urlbase+"login",{user:"admin",pwd:"admin"})
+    .done(function(data){ 
         if(data.auth){
 
           
@@ -33,8 +35,13 @@ function getToken(cb){
         }
         else
             alert(data.message);
-        cb(data);       
+        cb(data);   
+     })
+    .fail(function(xhr, status, error) {
+        alert('Não foi possivel concluir a request.')
     });
+
+   
 }
 
 function getDataExpiracaoToken(){
@@ -75,7 +82,10 @@ function makeRequest(url,parametros,method, cb){
         
         $.ajax(settings).done(function (response) {
             cb(response)
-        });        
+        })
+        .fail(function(xhr, status, error) {
+            alert('Não foi possivel concluir a request.')
+        });;        
 
     })
 }
