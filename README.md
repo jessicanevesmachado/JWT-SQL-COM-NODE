@@ -1,4 +1,4 @@
-# botilabs
+# Botilabs
 
 As tecnologias utilizadas para o desenvolvimento do projeto foram: nodejs, jquery, javascript, sql server 2017 e bootstrap 4
 
