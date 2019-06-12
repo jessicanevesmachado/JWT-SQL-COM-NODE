@@ -12,8 +12,8 @@ const config = {
     authentication: {
       type: "default",
       options: {  
-        userName: "sa",
-        password: "832725",
+        userName: "seuusuario",
+        password: "suasenha",
     }
   }}
 
