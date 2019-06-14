@@ -33,9 +33,12 @@ function getToken(cb){
             localStorage.setItem('token',JSON.stringify(session));
             cb(session); 
         }
-        else
+        else{
             alert(data.message);
-        cb(data);   
+            cb(data); 
+        }
+          
+          
      })
     .fail(function(xhr, status, error) {
         alert('Não foi possivel concluir a request.')

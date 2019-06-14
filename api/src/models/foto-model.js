@@ -12,8 +12,10 @@ class FotoModel {
         connection.on('connect', function(err) {  
            
             if(err) cb({status:false, mensagem: 'Não foi possivel se conectar no banco de dados.'})
+            else
+                service.inserir(connection,response,cb);  
 
-            service.inserir(connection,response,cb);  
+           
         });  
      
     };
@@ -24,8 +26,11 @@ class FotoModel {
           var bufferfoto = new Buffer(response.foto , 'base64');
         
           var  request = new Request("insert into Tutorial values( @video, @foto) SELECT SCOPE_IDENTITY() ", function(err) {  
-                if (err) 
-                 cb({status:false, mensagem: 'Erro ao salvar a foto.'})
+                if (err) {
+                    cb({status:false, mensagem: 'Erro ao salvar a foto.'});
+                    console.log('erro');
+                }
+                     
                 
            });  
         
@@ -34,7 +39,8 @@ class FotoModel {
              
            request.on('row', function(columns) {               
                
-             cb({status:true, mensagem: 'Operação realizada com sucesso.'});
+                 cb({status:true, mensagem: 'Operação realizada com sucesso.'});
+                 console.log('row');
                
            });       
 
