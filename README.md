@@ -1,4 +1,4 @@
-# Botilabs
+#CONECTANDO NO SQL ATRAVES DO NODE.JS
 
 As tecnologias utilizadas para o desenvolvimento do projeto foram: nodejs, jquery, javascript, sql server 2017 e bootstrap 4
 
